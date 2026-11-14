@@ -143,7 +143,21 @@ label.fl{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--m
 .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:12px 20px;border-radius:14px;transition:.3s;z-index:60;font-size:15px}
 .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 .mob-nav{display:none}
-@media (max-width:900px){
+@media (orientation:portrait) and (min-width:701px){
+  .app{grid-template-columns:clamp(190px,20vw,260px) 1fr}
+  main{padding:clamp(20px,3vw,40px)}
+  .g2{grid-template-columns:1fr}
+  .g3{grid-template-columns:1fr 1fr}
+  body{font-size:clamp(16px,1.6vw,22px)}
+  .nav button{font-size:clamp(16px,1.7vw,22px);padding:clamp(11px,1.4vw,18px) 14px}
+  .head h2{font-size:clamp(36px,5.5vw,64px)}
+  .card h3{font-size:clamp(22px,2.6vw,32px)}
+  .clock{font-size:clamp(64px,10vw,130px)}
+  .ev{grid-template-columns:clamp(62px,8vw,90px) 4px 1fr auto}
+  .box{width:clamp(26px,3vw,36px);height:clamp(26px,3vw,36px)}
+  .av{width:clamp(30px,3.6vw,42px);height:clamp(30px,3.6vw,42px)}
+}
+@media (max-width:700px){
   .app{grid-template-columns:1fr}
   .side{display:none}
   main{padding:16px 16px 100px}
